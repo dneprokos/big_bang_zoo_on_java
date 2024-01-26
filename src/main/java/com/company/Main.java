@@ -27,14 +27,14 @@ public class Main {
         //Prepare Animals
         SerialNumberHelper serialNumber = new SerialNumberHelper();
         List<Animal> bingBangAnimals = Arrays.asList(
-                new Cat(serialNumber.getSerialNumber(), "Sheldon", DateHelpers.createDateYearsAgo(6)),
-                new Cat(serialNumber.getSerialNumber(), "Leonard", DateHelpers.createDateYearsAgo(4)),
-                new Dog(serialNumber.getSerialNumber(), "Penny", DateHelpers.createDateYearsAgo(2)),
+                new Cat(serialNumber.getSerialNumber(), "Sheldon", DateHelpers.createDateYearsAgo(4)),
+                new Cat(serialNumber.getSerialNumber(), "Leonard", DateHelpers.createDateYearsAgo(6)),
+                new Dog(serialNumber.getSerialNumber(), "Penny", DateHelpers.createDateYearsAgo(3)),
                 new Dog(serialNumber.getSerialNumber(), "Raj", DateHelpers.createDateYearsAgo(7)),
                 new Wolf(serialNumber.getSerialNumber(), "Bernadette", DateHelpers.createDateYearsAgo(3)),
                 new Wolf(serialNumber.getSerialNumber(), "Emily", DateHelpers.createDateYearsAgo(5)),
-                new Rabbit(serialNumber.getSerialNumber(), "Howard", DateHelpers.createDateYearsAgo(3)),
-                new Rabbit(serialNumber.getSerialNumber(), "Stuart", DateHelpers.createDateYearsAgo(3))
+                new Rabbit(serialNumber.getSerialNumber(), "Howard", DateHelpers.createDateYearsAgo(6)),
+                new Rabbit(serialNumber.getSerialNumber(), "Stuart", DateHelpers.createDateYearsAgo(7))
         );
 
         //Create and populate a Bing Bang Zoo
@@ -51,9 +51,9 @@ public class Main {
         }
 
         //verify that in Zoo there are any Cat with age more than 5 year
-        boolean hasCatsOlderThanFive = bingBangZoo.getAllAnimals().stream()
+        boolean haveCatsOlderThanFive = bingBangZoo.getAllAnimals().stream()
                 .filter(animal -> animal instanceof Cat)
                 .anyMatch(cat -> cat.getAge() > 5);
-        System.out.println(String.format("Is there any cat older than 5 years? %s", hasCatsOlderThanFive));
+        System.out.println(String.format("Is there any cat older than 5 years? %s", haveCatsOlderThanFive));
     }
 }
