@@ -10,6 +10,15 @@ Sample Java projects that implements a Zoo based on Bing Bang Theory characters
 - Java: Ensure you have Java installed on your system. The project is compatible with Java 8.
 - Maven: This project uses Maven for dependency management and building. Make sure Maven is installed on your system.
 
+## Project structure
+
+![Project structure Image](/images/project_structure.png)
+
+- Project was split on two parts: main and test
+- main.java.com.company contains zoo implementation logic
+- test.java.com.company contains unit tests based on JUnit
+
+
 ## How to Run the Application
 
 - Build the Project: **mvn clean install**
